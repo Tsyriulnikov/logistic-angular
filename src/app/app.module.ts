@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { MapComponent } from './components/map/map.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MarkerService} from "./services/marker.service";
+import {PopupService} from "./services/popup.service";
 
 @NgModule({
   declarations: [
@@ -14,9 +17,13 @@ import { MapComponent } from './components/map/map.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MarkerService,
+    PopupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

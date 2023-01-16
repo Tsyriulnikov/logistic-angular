@@ -30,15 +30,16 @@ export class MapComponent implements AfterViewInit {
       center: [39.8282, -98.5795],
       zoom: 3
     })
-const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom:18,
-  minZoom:3,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  })
-tiles.addTo(this.map)
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 3,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    })
+    tiles.addTo(this.map)
 
   }
-constructor(private markerService:MarkerService) {
+
+  constructor(private markerService: MarkerService) {
   }
 
   ngAfterViewInit(): void {

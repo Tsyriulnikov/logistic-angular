@@ -8,11 +8,13 @@ import { MapComponent } from './components/map/map.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MarkerService} from "./services/marker.service";
 import {PopupService} from "./services/popup.service";
+import { DestComponent } from './components/dest/dest.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
+    DestComponent,
   ],
   imports: [
     BrowserModule,

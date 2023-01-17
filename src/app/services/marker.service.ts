@@ -23,6 +23,7 @@ export class MarkerService {
         const lat = c.geometry.coordinates[1];
         const marker = L.marker([lat, lon]);
 
+        // marker.bindPopup(this.popupService.makeCapitalPopup(c.properties))
         marker.bindPopup(this.popupService.makeCapitalPopup(c.properties))
         marker.addTo(map);
       }
